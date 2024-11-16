@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #2e2e2e;
+}
+
+header {
+    background-color: #0084ff;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.about, .gallery, .message {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1414e1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+  width:100%;
+}

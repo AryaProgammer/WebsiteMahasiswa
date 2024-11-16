@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website DeepTalk</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Pastikan styles.css ada di folder yang benar -->
+</head>
+<body>
+    <header>
+        <h1>Untuk Cintaku</h1>
+        <p>INES SINTYA</p>
+    </header>
+    
+    <main>
+        <section class="about">
+            <h2>Pesan</h2>
+            <p>
+                Aku tahu kamu memang bukan yang pertama, 
+                Tapi kamu adalah yang terakhir yang aku harap ada. 
+                Di setiap langkah yang telah berlalu, 
+                Aku belajar, dan aku tumbuh, 
+                Hingga akhirnya aku menemui kamu.
+                
+                Kamu bukan yang pertama yang aku cintai, 
+                Tapi kamu adalah yang pertama yang membuatku merasa di rumah. 
+                Di pelukanmu, aku menemukan tempat yang aman, 
+                Di matamu, aku melihat masa depan yang indah.
+                
+                Mungkin kita nggak bisa menghapus semua kenangan yang ada, 
+                Tapi aku percaya, denganmu, aku bisa membuat kenangan baru. 
+                Kenangan yang lebih kuat, lebih berarti, 
+                Karena kamu adalah orang yang membuatku ingin bertahan, 
+                Menjalani hari-hari ke depan, bersama kamu.
+                
+                Kamu bukan yang pertama, 
+                Tapi kamu adalah yang terakhir yang aku harap takkan pernah pergi. 
+                Karena cinta kita bukan tentang siapa yang datang duluan, 
+                Tapi tentang siapa yang ada untuk tetap di sini, 
+                Menemani, mencintai, dan saling menguatkan.
+                
+                Dan meski bukan yang pertama, 
+                Aku percaya kita bisa saling jadi yang terbaik, 
+                Untuk satu sama lain, 
+                Seperti yang selalu aku inginkan. 
+                Kamu adalah bagian terakhir yang aku harap tetap ada.
+            </p>
+        </section>
+
+        <section class="gallery">
+            <h2>KEKASIH GELAPKU :)</h2>
+            
+            <img src="images/cantiku.JPG" alt="Kenangan1.">
+            <img src="images/cintaku.JPG" alt="Kenangan2.">
+            <img src="images/cayangku.JPG" alt="Kenangan3.">
+        </section>
+
+        <section class="message">
+            <h2>Pesan Cinta</h2>
+            <textarea id="loveMessage" placeholder="Tulis pesan untuk Arya..." maxlength="500"></textarea>
+            <p id="charCount">500 karakter tersisa</p>
+            <button onclick="sendMessage()">Kirim Pesan</button>
+            <div id="messageOutput"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ines Sintya Dekeng. Semua Hak Cipta dilindungi UUD.</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menangani pengiriman pesan
+        function sendMessage() {
+            const message = document.getElementById("loveMessage").value;
+            const outputDiv = document.getElementById("messageOutput");
+            
+            if (message.trim() === "") {
+                outputDiv.innerHTML = "<p style='color: red;'>Tolong tulis pesan terlebih dahulu.</p>";
+            } else {
+                outputDiv.innerHTML = `<p><strong>Pesan untuk Arya:</strong> ${message}</p>`;
+                document.getElementById("loveMessage").value = ""; // Kosongkan textarea setelah pesan dikirim
+            }
+        }
+
+        // Menghitung karakter yang tersisa di textarea
+        document.getElementById("loveMessage").addEventListener("input", function() {
+            const charCount = 500 - this.value.length;
+            document.getElementById("charCount").innerText = `${charCount} karakter tersisa`;
+        });
+
+        // Menampilkan tahun dinamis di footer
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").innerText = currentYear;
+    </script>
+</body>
+</html>
